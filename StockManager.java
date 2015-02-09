@@ -37,6 +37,15 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        if( id >= 0 || id < stock.size())
+        {
+            stock.get(id).increaseQuantity(amount);
+        }
+        else
+        {
+        System.out.println("Error: No existe ID.");
+        }
+
     }
 
     /**
